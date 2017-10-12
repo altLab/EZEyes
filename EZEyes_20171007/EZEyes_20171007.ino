@@ -123,4 +123,59 @@ void loop() {   /* put your main code here, to run repeatedly: */
  * DATA CONSTRAIN
  * Constrain(x, a, b)
  * 
+ * -------------------- OPTIMIZATION -------------------- 
+  
+https://forum.arduino.cc/index.php?topic=138473.15
+  
+Voltage  Clock  Current
+         (MHz)   (mA)
+  5.0     16*a   16.5
+  4.0     16      9.1
+  3.3     16      6.7
+  3.0     16      6.0
+  2.8     16      5.5
+  2.5     16      4.8
+  2.4     16      4.6
+  2.3     16      4.3
+  2.2     16      4.1
+  2.1     16      3.8
+  2.0     16      did not run
+
+  5.0      8*b   12.3
+  4.0      8      5.5
+  3.3      8      3.7
+  3.0      8      3.3
+  2.8      8      3.0
+  2.5      8      2.7
+  2.4      8      2.5
+  2.3      8      2.4
+  2.2      8      2.3
+  2.1      8      2.1
+  2.0      8      2.0
+
+*a Low fuse = 0xFF
+*b Low fuse = 0xE2
+
+////////////////////////////// Sleeping
+
+#include <avr/sleep.h>
+
+void setup() 
+  {
+  for (int i = 0; i <= A5; i++)
+    {
+    pinMode (i, OUTPUT);
+    digitalWrite (i, LOW);
+    }
+  // disable ADC
+  ADCSRA = 0;  
+  // turn off various modules
+  PRR = 0xFF; 
+  set_sleep_mode (SLEEP_MODE_PWR_DOWN);  
+  sleep_enable();
+  sleep_cpu ();          
+}
+
+void loop() { }
+
  */
