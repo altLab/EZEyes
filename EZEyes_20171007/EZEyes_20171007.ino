@@ -111,7 +111,10 @@ void loop() {   /* put your main code here, to run repeatedly: */
  * VIBRATION MOTOR (Phone Junk) 140mah / 60mah
  * Typical: https://www.precisionmicrodrives.com/sites/default/files/datasheet-for-the-306-101-vibration-motor.original.pdf
  * Round: https://www.precisionmicrodrives.com/sites/default/files/310-101-datasheet.pdf
- * 
+ *
+ * ELECTRONICS REFERENCE PROJECTS
+ * Mapy Dot Arduino+VL53L0X > https://hackaday.io/project/25571-mappydot 
+ *
  * -------------------- SOFTWARE --------------------
  * 
  * BUTTON DEBOUNCING
