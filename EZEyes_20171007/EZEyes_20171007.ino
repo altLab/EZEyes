@@ -113,7 +113,8 @@ void loop() {   /* put your main code here, to run repeatedly: */
  * Round: https://www.precisionmicrodrives.com/sites/default/files/310-101-datasheet.pdf
  *
  * ELECTRONICS REFERENCE PROJECTS
- * Mapy Dot Arduino+VL53L0X > https://hackaday.io/project/25571-mappydot 
+ * Mapy Dot Arduino+VL53L0X > https://hackaday.io/project/25571-mappydot
+ * Digital White Cane > https://hackaday.io/project/27111-digital-white-cane
  *
  * -------------------- SOFTWARE --------------------
  * 
