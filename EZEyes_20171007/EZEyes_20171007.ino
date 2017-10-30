@@ -124,7 +124,9 @@ void loop() {   /* put your main code here, to run repeatedly: */
  * 
  * DATA SMOOTHING
  * https://www.arduino.cc/en/Tutorial/Smoothing
- * 
+ * http://damienclarke.me/code/posts/writing-a-better-noise-reducing-analogread
+ *
+ *
  * DATA CONSTRAIN
  * Constrain(x, a, b)
  * 
