@@ -116,6 +116,7 @@ void loop() {   /* put your main code here, to run repeatedly: */
  * Mapy Dot Arduino+VL53L0X > https://hackaday.io/project/25571-mappydot
  * Digital White Cane > https://hackaday.io/project/27111-digital-white-cane
  * PandaGuide (Comercial) > https://www.panda-guide.fr/notre-vision
+ * Talking Walking Stick for the Blind > https://patient-innovation.com/post/732
  *
  * -------------------- SOFTWARE --------------------
  * 
