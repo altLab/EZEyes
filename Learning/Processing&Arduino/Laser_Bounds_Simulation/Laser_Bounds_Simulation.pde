@@ -34,11 +34,11 @@ void draw() {
  line(l1.x,l1.y,mouseP.x, mouseP.y);
  stroke(0, 255, 0);
   
-  if (l1_angle < -25 || l1_angle > 25 || l1_mdist > 400){
+  if (l1_angle < -12.5 || l1_angle > 12.5 || l1_mdist > 400){
     
    stroke(255, 0, 0);
    
-    if (l1_angle < -25 || l1_angle > 25){
+    if (l1_angle < -12.5 || l1_angle > 12.5){
        text("Out of Bounds", width/2, height/2);
     }
     if (l1_mdist > 400){
