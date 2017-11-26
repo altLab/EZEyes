@@ -1,47 +1,71 @@
-// Reference math functions http://sol.gfxile.net/interpolation/
+// Reference math functions http://sol.gfYile.net/interpolation/
 
 //Declare Vars and Import Libs
-float N, v, X, A, B;
+float N, v, Y, A, B;
 
 
 //Runs once
 void setup() 
   {
-    size(400 , 400);
+    size(600 , 500);
     noLoop();
     
-    N = 10;
-    B = 0;
-    A = 400;
+    // flip Y axis so the positive values are facing upwards on the screen
+    scale(1, -1);
+    translate(0,-height);
+    
+    N = 10;     // number of samples
+    A = 0;      // Origin Value
+    B = 2000;    // Destination value
+
     
     
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i <= N; i++)
     {
       v = i / N;
       v = v * v;
-      X = (A * v) + (B * (1 - v));
-      println(X);
+      Y = (B * v) + (A * (1 - v));
+      
+      float PY = i * (width/N);
+      float Py = height * (Y/B);
+      float Pw = 5;
+      float Ph = 5;
+      
       fill(255,0,0);
-      ellipse(i * (width/N),height-X, 5, 5);
+      ellipse( 200, Py , Pw, Ph);
+      println("SQR " + Y);
     } 
     
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i <= N; i++)
     {
       v = i / N;
-      X = (A * v) + (B * (1 - v));
+      Y = (B * v) + (A * (1 - v));
+      
+      float PY = i * (width/N);
+      float Py = height * (Y/B);
+      float Pw = 5;
+      float Ph = 5;
+      
       fill(0,255,0);
-      println(X);
-      ellipse(i * (width/N),height-X, 5, 5);
-    } 
+      ellipse( 300, Py , Pw, Ph);
+      println("LIN " + Y);
+  } 
     
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i <= N; i++)
     {
       v = i / N;
       v = 1 - (1 - v) * (1 - v);
-      X = (A * v) + (B * (1 - v));
+      Y = (B * v) + (A * (1 - v));
+      
+      float PY = i * (width/N);
+      float Py = height * (Y/B);
+      float Pw = 5;
+      float Ph = 5;
+      
       fill(0,0,255);
-      ellipse(i * (width/N),height-X, 5, 5);
-    } 
+      ellipse( 400, Py , Pw, Ph);
+      println("INVSQR " + Y);
+  } 
 
   }
   
